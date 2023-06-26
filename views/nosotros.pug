@@ -1,0 +1,37 @@
+//- Extendiendo de un layout principal
+
+extends ./layout/index
+
+block contenido
+    main.container.mt-5 
+        .row 
+            .col-md-5
+                img(src="/img/nosotros.jpg", alt="Imagen nosotros" class="img-fluid")
+            .col-md-7
+                h1 #{pagina}
+                blockquote  
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius egestas odio, quis commodo ex ultricies in. Integer eget vulputate nisi, eu efficitur justo. Etiam blandit ex lacus, ac sagittis tortor consectetur ut.
+
+                p 
+                    | Duis in mauris sit amet felis dapibus suscipit. Nam vestibulum, est a vehicula auctor, ante dolor efficitur lacus, sed tristique nunc nisl eu sapien. Curabitur at placerat tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+
+                p   
+                    | Vivamus blandit tincidunt interdum. Mauris urna purus, ullamcorper ultricies felis eu, porttitor lacinia nunc. Duis ac tincidunt justo. Maecenas semper tristique maximus. 
+    
+    .listado-iconos 
+        .container.mt-5.py-5.text-center
+            .row 
+                .col-md-4
+                    img(src="/img/icono_seguridad.svg", alt="Icono Seguridad" class="mb-4 img-fluid")
+                    h2.mb-4 Seguridad
+                    p Duis ac tincidunt justo. Maecenas semper tristique maximus. 
+
+                .col-md-4
+                    img(src="/img/icono_destinos.svg", alt="Icono Destinos" class="mb-4 img-fluid")
+                    h2.mb-4 Mejores Destinos
+                    p Duis ac tincidunt justo. Maecenas semper tristique maximus. 
+
+                .col-md-4
+                    img(src="/img/icono_precios.svg", alt="Icono Precios" class="mb-4 img-fluid")
+                    h2.mb-4 Precios
+                    p Duis ac tincidunt justo. Maecenas semper tristique maximus. 

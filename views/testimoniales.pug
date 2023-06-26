@@ -1,0 +1,35 @@
+extends layout/index
+
+block contenido
+    main.container.mt-5 
+        
+        h1.text-center.mt-5.mb-3 #{pagina}
+        blockquote.text-center Lee sobre nuestros clientes y sus experiencias
+        include layout/bloque_testimoniales.pug
+
+        .row 
+
+            .col-md-12
+                h2.d-block.text-center.w-100 Cuentanos tu experiencia
+
+                if(errores) 
+                    each error in errores 
+                        .alert.alert-danger.col.text-center= error.mensaje
+                
+
+            .row.col.justify-content-center 
+                .col-md-8
+                    form(action="/testimoniales" method="post")
+                        .form-group
+                            label.form-label(for="nombre") Nombre 
+                            input#nombre(type="text", class="form-control", placeholder="Eje. John", name="nombre", value= nombre) 
+
+                        .form-group
+                            label.form-label(for="correo") Correo Electronico 
+                            input#correo(type="email", class="form-control", placeholder="Eje.email@email.com", name="correo" value= correo)
+
+                        .form-group
+                            label.form-label(for="mensaje") Mensaje 
+                            textarea#mensaje(name="mensaje", cols="3", rows="3", class="form-control", placeholder="Dejanos tu mensaje aqui")= mensaje
+
+                        input.btn.btn-success.btn-block(type="submit")
